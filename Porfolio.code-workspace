@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Porfolio",
+			"path": "."
+		},
+		{
+			"name": "node_modules",
+			"path": "../../../../../xampp/htdocs/volunteeringmarathon/node_modules"
+		}
+	],
+	"settings": {}
+}
