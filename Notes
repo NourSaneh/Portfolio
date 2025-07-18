@@ -1,0 +1,5 @@
+Really small peep:
+
+
+    <img src="images/Main-peep.png" class="absolute left-10 top-[65%] md:top-[75%] lg:top-[80%] w-32 md:w-40 lg:w-48"
+        alt="Avatar" />

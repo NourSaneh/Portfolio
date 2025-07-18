@@ -2,15 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Avatar Layout</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body
-    class="bg-[url('images/Main-Bg.jpeg')] bg-[length:100%_100%] bg-center bg-no-repeat overflow-hidden h-[110vh] m-0">
+<body class="relative h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"   style="background-image: url('images/Main-Bg.jpeg');"> 
+    <img src="images/Main-peep.png" class="avatar" alt="Avatar" />
+    <nav>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/noursaneh" target="_blank">
+                    <div class="icon-wrap">
+                        <i class="fab fa-linkedin-in fa-2x" style="color:white;"></i>
+                    </div>
+                </a>
+            </li>
 
-</body>
+            <li>
+                <a href="https://github.com/noursaneh" target="_blank">
+                    <div class="icon-wrap">
+                        <i class="fab fa-github fa-2x" style="color:white;"></i>
+                    </div>
+                </a>
+            </li>
 
+            <li>
+                <a href="mailto:noursaneh34@gmail.com">
+                    <div class="icon-wrap">
+                        <i class="fas fa-envelope fa-2x" style="color:white;"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+<img src="images/surprise.png" class="avatar_surprised" alt="Avatar" /> 
+   <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
+
+
+ </body>
 </html>
