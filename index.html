@@ -11,7 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="relative h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"   style="background-image: url('images/Main-Bg.jpeg');"> 
+<body class="relative h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
+    style="background-image: url('images/Main-Bg.jpeg');">
     <img src="images/Main-peep.png" class="avatar" alt="Avatar" />
     <nav>
         <ul>
@@ -41,10 +42,73 @@
         </ul>
     </nav>
 
+    <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
+    <div class="thought-bubble">
+        <span class="thought-text">Let's work together!</span>
+        <span class="bubble small"></span>
+        <span class="bubble smaller"></span>
+    </div>
+    <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
+    <div class="flex flex-col items-start text-white space-y-3">
+        <div class="ml-20 mt- text-2xl md:text-6xl font-bold">
+            I'm Nour Saneh
+        </div>
+        <br>
+        <div
+            class="typing-container ml-6 md:ml-20 max-w-full md:max-w-4xl text-lg md:text-3xl font-mono leading-relaxed text-left whitespace-nowrap">
+            <div><span class="line" id="line1"></span></div>
+            <br>
+            <div><span class="line" id="line2"></span></div>
+            <br>
+            <div><span class="line" id="line3"></span></div>
+        </div>
 
-<img src="images/surprise.png" class="avatar_surprised" alt="Avatar" /> 
-   <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
 
 
- </body>
+    </div>
+    </div>
+
+</body>
+<script>
+    const lines = [
+        "Front-End Web Designer crafting seamless digital experiences.",
+        "I turn your ideas into stunning, interactive websites.",
+        "Let’s build something amazing that users will love!"
+    ];
+
+    const lineElements = [
+        document.getElementById("line1"),
+        document.getElementById("line2"),
+        document.getElementById("line3")
+    ];
+
+    let currentLine = 0;
+    let charIndex = 0;
+
+    function typeNextChar() {
+        if (currentLine < lines.length) {
+            const cursor = '<span class="cursor">|</span>';
+
+            if (charIndex < lines[currentLine].length) {
+                // Update current line text with cursor at the end
+                lineElements[currentLine].innerHTML =
+                    lines[currentLine].substring(0, charIndex + 1) + cursor;
+
+                charIndex++;
+                setTimeout(typeNextChar, 50);
+            } else {
+                // Finalize line without cursor
+                lineElements[currentLine].textContent = lines[currentLine];
+
+                currentLine++;
+                charIndex = 0;
+                setTimeout(typeNextChar, 400);
+            }
+        }
+    }
+
+    typeNextChar();
+</script>
+
+
 </html>

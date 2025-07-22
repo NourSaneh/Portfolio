@@ -101,7 +101,7 @@ body {
 nav {
     float: left;
     position: relative;
-    top: 100px;
+    top: 150px;
     left: 0;
     background: transparent;
 }
@@ -251,10 +251,77 @@ nav ul li:nth-child(3):after {
 
 .avatar_contact {
     position: absolute;
-    left: 0;
-    top: 0%;
+    top: -4rem;
+    left: -3.5rem;
     width: 13.45rem;
     transform: rotate(68deg);
+    z-index: 50;
+    animation: popIn 1s ease-out forwards;
+}
+
+@keyframes popIn {
+    from {
+        top: -2rem;
+        left: -5rem;
+        opacity: 0;
+    }
+
+    to {
+        top: 1rem;
+        left: -3.5rem;
+        opacity: 1;
+    }
+}
+
+.thought-bubble {
+    position: absolute;
+    top: 1rem;
+    /* Adjust to align with head */
+    left: 9rem;
+    /* Adjust based on avatar position */
+    background: white;
+    border-radius: 50%;
+    padding: 1.5rem 2rem;
+    width: max-content;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.thought-text {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.bubble {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.bubble.small {
+    width: 15px;
+    height: 15px;
+    left: -1.5rem;
+    top: 1.5rem;
+}
+
+.bubble.smaller {
+    width: 10px;
+    height: 10px;
+    left: -2.2rem;
+    top: 2.5rem;
+}
 
 
+.cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
