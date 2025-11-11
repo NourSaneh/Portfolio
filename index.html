@@ -4,111 +4,249 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Avatar Layout</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>NourSaneh - Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+
+
 </head>
 
-<body class="relative h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
-    style="background-image: url('images/Main-Bg.jpeg');">
-    <img src="images/Main-peep.png" class="avatar" alt="Avatar" />
-    <nav>
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/noursaneh" target="_blank">
-                    <div class="icon-wrap">
-                        <i class="fab fa-linkedin-in fa-2x" style="color:white;"></i>
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="https://github.com/noursaneh" target="_blank">
-                    <div class="icon-wrap">
-                        <i class="fab fa-github fa-2x" style="color:white;"></i>
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:noursaneh34@gmail.com">
-                    <div class="icon-wrap">
-                        <i class="fas fa-envelope fa-2x" style="color:white;"></i>
-                    </div>
-                </a>
-            </li>
+<body>
+    <!-- Nav -->
+    <nav aria-label="Main navigation" class="relative z-50 flex justify-center mt-6">
+        <ul class="flex gap-12 px-12 py-5 rounded-full bg-white/30 backdrop-blur-lg shadow-md">
+            <li><a href="#home" class="nav-link text-black font-semibold transition">Home</a></li>
+            <li><a href="#projects" class="nav-link text-black font-semibold transition">Projects</a></li>
+            <li><a href="#contact" class="nav-link text-black font-semibold transition">Contact</a></li>
         </ul>
     </nav>
 
-    <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
-    <div class="thought-bubble">
-        <span class="thought-text">Let's work together!</span>
-        <span class="bubble small"></span>
-        <span class="bubble smaller"></span>
-    </div>
-    <img src="images/Contact-peep.png" class="avatar_contact" alt="Avatar">
-    <div class="flex flex-col items-start text-white space-y-3">
-        <div class="ml-20  text-2xl md:text-5xl font-bold">
-            I'm Nour Saneh
+    <img src="avatar-Main.png" alt="Avatar" class="mx-auto mt-10 w-48 h-48 rounded-full shadow-lg" />
+    <header id="home" class="text-center mt-6">
+        <h1 class="text-4xl font-bold text-black">Nour Saneh</h1>
+        <p class="text-lg mt-2" style="color: var(--gold);">Front End Developer & UI/UX</p>
+    </header>
+
+    <section id="about" class="max-w-3xl mx-auto mt-12 px-6">
+        <h2 class="text-4xl font-[Montserrat] font-semibold mb-4" style="color: var(--gold-light);">About Me</h2>
+        <p class="leading-relaxed font-[Poppins] text-2xl" style="color: var(--gold);">
+            Hello! I’m Nour Saneh, a recent computer science graduate, a passionate web developer and designer with a
+            keen eye
+            for detail and creativity. I love crafting elegant, user friendly websites that merge clean design with
+            efficient
+            code. With a strong foundation in development and a genuine passion for visual design, I strive to create
+            digital
+            experiences that are both functional and inspiring.
+        </p>
+        <blockquote
+            class="mt-6 mx-auto max-w-2xl text-center italic bg-black/20 backdrop-blur-sm rounded-xl px-5 py-4 shadow-[0_6px_24px_rgba(0,0,0,0.35)]"
+            style="color: var(--gold-light);">
+            "Ready for the Hard and Exciting Journey ahead of Me!"
+        </blockquote>
+    </section>
+    <section id="skills" class="max-w-4xl mx-auto mt-20 px-6 text-center">
+        <h2 class="text-4xl font-[Montserrat] font-semibold mb-10" style="color: var(--gold-light);">
+            Skills & Technologies
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center">
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-html5-plain text-5xl text-[#E34F26]"></i>
+                <p class="text-white text-base font-medium mt-1">HTML</p>
+            </div>
+
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-tailwindcss-original text-5xl text-[#38BDF8]"></i>
+                <p class="text-white text-base font-medium mt-1">Tailwind CSS</p>
+            </div>
+
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-javascript-plain text-5xl text-[#F7DF1E]"></i>
+                <p class="text-white text-base font-medium mt-1">JavaScript</p>
+            </div>
+
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-react-original text-5xl text-[#61DAFB]"></i>
+                <p class="text-white text-base font-medium mt-1">React.js</p>
+            </div>
         </div>
-        <br>
+
+        <div class="flex flex-wrap justify-center gap-8 mt-10">
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-figma-plain text-5xl text-[#A259FF]"></i>
+                <p class="text-white text-base font-medium mt-1">Figma</p>
+            </div>
+
+            <div
+                class="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.4)] hover:scale-[1.08] transition">
+                <i class="devicon-git-plain text-5xl text-[#F1502F]"></i>
+                <p class="text-white text-base font-medium mt-1">Git</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="max-w-5xl mx-auto mt-20 px-6 text-center">
+        <h2 class="text-4xl font-[Montserrat] font-semibold mb-10" style="color: var(--gold-light);">
+            Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div
+                class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.3)] hover:scale-[1.03] transition-transform duration-300 text-left">
+                <h3 class="text-2xl font-semibold text-white mb-2">Daresne</h3>
+                <p class="text-gray-200 mb-4 leading-relaxed">
+                    A web app that helps users prepare for driving exams through interactive quizzes and progress
+                    tracking.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80 cursor-not-allowed"
+                            style="background: #ccc; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            ✖ Under Development
+                        </a>
+                    </div>
+
+                    <a href="https://github.com/NourSaneh/DrivingWebApp" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold-light); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Code
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+                class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.3)] hover:scale-[1.03] transition-transform duration-300 text-left">
+                <h3 class="text-2xl font-semibold text-white mb-2">volunteering Marathon</h3>
+                <p class="text-gray-200 mb-4 leading-relaxed">
+                    A web platform created for a volunteering organization to manage and promote local
+                    marathons and community events. The site allows users to register as volunteers, view event details,
+                    and explore upcoming activities. </p>
+                <div class="flex gap-4">
+                    <a href="https://volunteeringmarathon.vercel.app/" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/NourSaneh/volunteeringmarathon" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold-light); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Code
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+                class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.3)] hover:scale-[1.03] transition-transform duration-300 text-left">
+                <h3 class="text-2xl font-semibold text-white mb-2">Travel Trails</h3>
+                <p class="text-gray-200 mb-4 leading-relaxed">
+                    A hiking trails web app that helps users discover and review hiking spots with photos, maps, and
+                    user ratings.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80 cursor-not-allowed"
+                        style="background: #ccc; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        ✖ Under Development
+                    </a>
+                    <a href="" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold-light); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Code
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div
+                class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(234,215,164,0.3)] hover:scale-[1.03] transition-transform duration-300 text-left">
+                <h3 class="text-2xl font-semibold text-white mb-2"> Soon</h3>
+                <p class="text-gray-200 mb-4 leading-relaxed">
+                    Soon to be added...
+                </p>
+                <div class="flex gap-4">
+                    <a href="" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Live Demo
+                    </a>
+                    <a href="" target="_blank"
+                        class="px-4 py-2 rounded-full text-black font-medium transition hover:opacity-80"
+                        style="background: var(--gold-light); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="flex justify-center mt-20 mb-16 px-6">
         <div
-            class="typing-container ml-6  md:ml-20 max-w-full md:max-w-4xl text-lg md:text-3xl font-mono leading-relaxed text-left whitespace-nowrap">
-            <div><span class="line" id="line1"></span></div>
-            <br>
-            <div><span class="line" id="line2"></span></div>
-            <br>
-            <div><span class="line" id="line3"></span></div>
-        </div>
+            class="bg-neutral-200 w-full max-w-2xl rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-[0_10px_40px_rgba(234,215,164,0.20)]">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h2 class="text-xl mb-6" style="font-family: 'Playfair Display', serif;">Let’s Collaborate!</h2>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="https://linkedin.com/in/noursaneh" target="_blank" class="flex items-center gap-2 text-black font-medium px-6 py-2 rounded-full transition
+                    focus:outline-none focus:ring-2 focus:ring-black/40"
+                        style="background: var(--gold); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.23 8.5H4.7v15H.23v-15zM8.79 8.5h4.25v2.08h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76v8.46h-4.47v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97v7.63H8.79v-15z" />
+                        </svg>
+                        My LinkedIn
+                    </a>
 
+                    <a href="https://github.com/noursaneh" target="_blank" class="flex items-center gap-2 text-black font-medium px-6 py-2 rounded-full transition
+                    focus:outline-none focus:ring-2 focus:ring-black/40"
+                        style="background: var(--gold); box-shadow: 0 2px 10px rgba(234,215,164,0.25);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.75.09-.74.09-.74 1.21.09 1.85 1.26 1.85 1.26 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.51.12-3.15 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.85.12 3.15.77.84 1.24 1.92 1.24 3.24 0 4.63-2.81 5.66-5.49 5.96.43.38.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        My GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="text-center md:text-right space-y-3 text-gray-800 relative">
+                <p class="text-sm flex items-center justify-center md:justify-end gap-2">
+                    <span id="email-text">noursaneh34@gmail.com</span>
 
+                    <button id="copy-btn" aria-label="Copy email"
+                        class="p-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition focus:outline-none focus:ring-2 focus:ring-black/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-4 h-4 fill-current text-black">
+                            <path
+                                d="M16 4h-1.18A3 3 0 0 0 12 2a3 3 0 0 0-2.82 2H8a2 2 0 0 0-2 2v12a2
+                 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-4-1a1 1 0 0 1 .92.62l.13.38H11
+                 l.13-.38A1 1 0 0 1 12 3Zm4 17H8V6h8v14ZM6 6H5a2 2 0 0 0-2 2v11a3 3 0 0 0 3 3h10v-2H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6Z" />
+                        </svg>
+                        <span class="sr-only">Copy email</span>
+                    </button>
+                </p>
+                <div id="copy-tooltip"
+                    class="absolute right-0 top-[-26px] bg-black text-white text-xs rounded px-2 py-1 shadow-md opacity-0     pointer-events-none transition-opacity duration-300 translate-y-2">
+                    Copied!
+                </div>
 
-    </div>
-    </div>
-
+                <p class="font-medium text-base">+971 55 9426061</p>
+            </div>
 </body>
-<script>
-    const lines = [
-        "Front-End Web Designer crafting seamless digital experiences.",
-        "I turn your ideas into stunning, interactive websites.",
-        "Let’s build something amazing that users will love!"
-    ];
-
-    const lineElements = [
-        document.getElementById("line1"),
-        document.getElementById("line2"),
-        document.getElementById("line3")
-    ];
-
-    let currentLine = 0;
-    let charIndex = 0;
-
-    function typeNextChar() {
-        if (currentLine < lines.length) {
-            const cursor = '<span class="cursor">|</span>';
-
-            if (charIndex < lines[currentLine].length) {
-                // Update current line text with cursor at the end
-                lineElements[currentLine].innerHTML =
-                    lines[currentLine].substring(0, charIndex + 1) + cursor;
-
-                charIndex++;
-                setTimeout(typeNextChar, 50);
-            } else {
-                // Finalize line without cursor
-                lineElements[currentLine].textContent = lines[currentLine];
-
-                currentLine++;
-                charIndex = 0;
-                setTimeout(typeNextChar, 400);
-            }
-        }
-    }
-
-    typeNextChar();
-</script>
-
 
 </html>
